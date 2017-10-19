@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class MyScanner {
+  public static void main(String[] args) {
+    int x = (int)(Math.random() * 2000);
+    
+    for (int i = 0; i < 2000; i++) {
+      if (i == x) {
+        System.out.println("Value of x is " + i + "!");
+      	i = 1999;
+      }
+      else {
+        System.out.println("x is not " + i + "...");
+      }
+    }
+  }
+}
