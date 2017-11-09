@@ -1,0 +1,41 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int correctGuess = (int)(Math.random() * 10000);
+	    int minimumNumber = (int)(Math.random() * 1000);
+	    int randomNumber = (int)(Math.random() * 100);
+		boolean isCorrect = false;
+		int i = 0;
+		int max = correctGuess * randomNumber;
+		int min = minimumNumber;
+		
+		System.out.println("We are guessing a number " + minimumNumber + " - " + max);
+		
+		
+		while (!isCorrect) {
+		    i++;
+		    int guess = (max + min) / 2;
+		    if (guess == correctGuess) {
+		        System.out.println("Congrats you won in " + i + " tries!");
+		        isCorrect = true;
+		        break;
+		    } else if (guess > correctGuess) {
+		        System.out.println(guess + " is too high");
+		        max = guess;
+		    } else if (guess < correctGuess) {
+		        System.out.println(guess + " is too low");
+		        min = guess;
+		    }
+		    
+		}
+	}
+}
