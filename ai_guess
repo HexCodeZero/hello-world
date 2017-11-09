@@ -3,22 +3,22 @@ import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
-	    int correctGuess = (int)(Math.random() * 10000);
-	    int minimumNumber = (int)(Math.random() * 1000);
-	    int randomNumber = (int)(Math.random() * 100);
+	    int correctGuess = (int)(Math.random() * 1000);
+	    int minimumNumber = (int)(Math.random() * 100);
+	    int randomNumber = (int)(Math.random() * 1000);
 		boolean isCorrect = false;
 		int i = 0;
 		int max = correctGuess * randomNumber;
 		int min = minimumNumber;
 		
-		System.out.println("We are guessing a number " + minimumNumber + " - " + max);
+		System.out.println("The algorithm is now guessing a number " + minimumNumber + " through " + max);
 		
 		
 		while (!isCorrect) {
 		    i++;
 		    int guess = (max + min) / 2;
 		    if (guess == correctGuess) {
-		        System.out.println("Congrats you won in " + i + " tries!");
+		        System.out.println("The algorithm got " + correctGuess + " in " + i + " tries!");
 		        isCorrect = true;
 		        break;
 		    } else if (guess > correctGuess) {
