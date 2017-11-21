@@ -1,0 +1,28 @@
+public class DoThing {
+	int area;
+	int length;
+	int width;
+	int height;
+	
+	public DoThing(int length1, int width1, int height1) {
+		System.out.println("We have a " + length1 + " by " + width1 + " by " + height1 + " prism");
+		length = length1;
+		width = width1;
+		height = height1;
+	}
+	
+	public void calculateArea() {
+		area = length * width * height;
+	}
+	
+	public int returnArea() {
+		System.out.println("The area of the " + length +  " by " + width + " by " + height + " prism is " + area);
+		return area;
+	}
+	
+	public static void main(String[] args) {
+		DoThing calculations = new DoThing(684,792,784);
+		calculations.calculateArea();
+		calculations.returnArea();
+	}
+}
