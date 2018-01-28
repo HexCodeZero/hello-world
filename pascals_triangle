@@ -1,0 +1,27 @@
+public class PascalsTriangle{
+    
+    public static int facto(int x){
+        int i,fact = 1;
+        for (i=1;i <= x; i++){
+            fact=fact*i;
+        }
+        return fact;
+    }
+    
+    public static int choose(int a, int b){
+        int topdivisor = facto(a);
+        int bottomdivisor = facto(a-b) * facto(b);
+        return topdivisor/bottomdivisor;
+    }
+     public static void main(String []args){
+    	 int rows = 5;
+         for (int i = 0; i < rows; i++) {
+        	 for (int j = 0; j <= i; j++) {
+        		 System.out.print(choose(i,j));
+        		 System.out.print(" ");
+        	 }
+        	 System.out.println("");
+         }
+     }
+     
+}
