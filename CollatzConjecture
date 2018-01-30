@@ -1,0 +1,19 @@
+public class HelloWorld{
+    
+    public static int Collatz(int x){
+        int moves = 0;
+        while(x != 1){
+            if(x % 2 == 0){
+                x = x/2;
+            } else {
+                x = (3*x) + 1;
+            }
+            moves = moves + 1;
+        }
+        return moves;
+    }
+    
+     public static void main(String []args){
+         System.out.println(Collatz(63));
+     }
+}
